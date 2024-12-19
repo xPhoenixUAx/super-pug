@@ -1,1 +1,1 @@
-{"version":3,"file":"commonHelpers.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"commonHelpers.js","sources":["../src/js/galler.js"],"sourcesContent":["import Swiper from 'swiper';\nimport 'swiper/swiper-bundle.css';\n\nconst swiper = new Swiper('.swiper-container', {\n  slidesPerView: 1,\n  pagination: {\n    el: '.swiper-pagination',\n    clickable: true,\n  },\n});\n"],"names":["Swiper"],"mappings":"svBAGe,IAAIA,EAAO,oBAAqB,CAC7C,cAAe,EACf,WAAY,CACV,GAAI,qBACJ,UAAW,EACZ,CACH,CAAC"}
