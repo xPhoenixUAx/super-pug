@@ -112,6 +112,97 @@
 }
 
 .swiper-pagination {
-  position: static;
-  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 20px;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffd01e;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    width: 32px; /* Увеличенная ширина для эллипса */
+    height: px; /* Высота эллипса */
+    background-color: #ff232a; /* Цвет активной точки */
+    border-radius: 25px;
+  }
+}
+
+.custom-pagination {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.progress-bar-custom {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: yellow;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.red-dot-custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.3s ease;
+}
+
+.pagination-dot-custom {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot-custom.active {
+  background-color: green;
+}
+
+.custom-pagination-bar {
+  width: 100%; // Ширина на всю ширину слайдера
+  display: flex;
+  justify-content: center;
+  margin: 10px 0; // Отступы сверху и снизу
+}
+
+.progress-bar-custom {
+  position: relative;
+  width: 100%; // Занимает всю ширину
+  height: 6px; // Высота прогресс-бара
+  background-color: rgba(255, 208, 30, 0.5); // Цвет фона
+  border-radius: 3px; // Скругление углов
+  overflow: hidden; // Скрываем все, что выходит за пределы
+}
+
+.red-dot-custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 12px; // Ширина красной точки
+  height: 12px; // Высота красной точки
+  background-color: red; // Цвет красной точки
+  border-radius: 50%; // Скругление
+  transform: translate(-50%, -50%); // Центрируем по вертикали
+  transition: left 0.3s ease; // Плавный переход
 }

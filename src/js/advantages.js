@@ -11,12 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-advantages-next',
+      prevEl: '.swiper-button-advantages-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    on: {
+      init: function () {
+        createCustomPagination(this);
+      },
+      slideChange: function () {
+        updateCustomPagination(this);
+      },
     },
   });
 
@@ -31,3 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
   imageSwiper.controller.control = textSwiper;
   textSwiper.controller.control = imageSwiper;
 });
+
+// Функция создания кастомной пагинации
+function createCustomPagination(swiper) {
+  const paginationContainer = document.querySelector('.swiper-pagination');
+  if (!paginationContainer) return;
+
+  paginationContainer.innerHTML = ''; // Очищаем контейнер
+
+  swiper.slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('pagination-dot');
+    if (index === swiper.activeIndex) dot.classList.add('active');
+
+    // Добавляем обработчик клика
+    dot.addEventListener('click', () => {
+      swiper.slideTo(index);
+    });
+
+    paginationContainer.appendChild(dot);
+  });
+}
+
+// Функция обновления кастомной пагинации
+function updateCustomPagination(swiper) {
+  const dots = document.querySelectorAll('.pagination-dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === swiper.activeIndex);
+  });
+}
