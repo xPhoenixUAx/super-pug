@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="./scss/gallery.scss" />
 
-<section class="gallery container" id="gallery" id="gallery">
+<section class="gallery container">
   <h2 class="lePeek">Gallery</h2>
-  <div class="swiper-container">
+  <div class="swiper gallery-swiper">
     <div class="swiper-wrapper">
-      <!-- Пример слайдов, добавьте свои изображения -->
       <div class="swiper-slide">
         <picture>
           <source srcset="../img/gallerypics/galpic1.png" width="194px" />
-          <source
-            srcset="../img/gallery/mob/gallery1.png"
-            media="(max-width: 464px)" />
-          <img src="../img/gallerypics/galpic1.png" alt="Image 1" width="194px"
-        /></picture>
+          <img
+            src="../img/gallerypics/galpic1.png"
+            alt="Image 1"
+            width="194px"
+          />
+        </picture>
       </div>
       <div class="swiper-slide">
         <picture>
@@ -158,21 +158,33 @@
             width="194px"
         /></picture>
       </div>
-
-
     </div>
   </div>
   <div class="slider-controls">
     <div class="swiper-button-prev">
-        <img src="../img/gallerypics/arrowleft.png" alt="arrow-left" class="arrow-default" />
-        <img src="../img/gallerypics/arrowleftgreen.png" alt="arrow-left" class="arrow-hover" />
+      <img
+        src="../img/gallerypics/arrowleft.png"
+        alt="arrow-left"
+        class="arrow-default"
+      />
+      <img
+        src="../img/gallerypics/arrowleftgreen.png"
+        alt="arrow-left"
+        class="arrow-hover"
+      />
     </div>
-    <div class="swiper-pagination">
-        <img src="../img/gallerypics/pagin.png" alt="pagination" class="pagination-image" />
-    </div>
+    <div class="swiper-pagination"></div>
     <div class="swiper-button-next">
-        <img src="../img/gallerypics/arrowright.png" alt="arrow-right" class="arrow-default" />
-        <img src="../img/gallerypics/arrowrightпgreen.png" alt="arrow-right" class="arrow-hover" />
+      <img
+        src="../img/gallerypics/arrowright.png"
+        alt="arrow-right"
+        class="arrow-default"
+      />
+      <img
+        src="../img/gallerypics/arrowrightпgreen.png"
+        alt="arrow-right"
+        class="arrow-hover"
+      />
     </div>
   </div>
   <script type="module" src="./js/galler.js"></script>

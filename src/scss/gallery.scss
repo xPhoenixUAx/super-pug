@@ -1,3 +1,5 @@
+@import 'swiper/css';
+
 .container {
   max-width: 320px;
   padding: 16px;
@@ -11,20 +13,19 @@
   background-repeat: no-repeat;
 }
 
-.swiper-container {
+.swiper {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  position: relative;
+}
 
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 100%;
-      height: auto;
-    }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -33,7 +34,6 @@
   color: #ffd01e;
   font: 26px, 600;
   line-height: 1.14;
-  text-align: center;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 48px;
@@ -52,10 +52,17 @@
   }
 }
 
-.navigation-buttons {
-  
+.slider-controls {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-button-next,
@@ -65,57 +72,43 @@
   cursor: pointer;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  
+
   &:focus {
     outline: none;
   }
-  
+
   &::after {
     display: none;
   }
-  
+
   img {
     user-select: none;
     -webkit-user-select: none;
   }
-  
+
   .arrow-default {
     display: block;
     width: 24px;
     height: 24px;
     object-fit: contain;
   }
-  
+
   .arrow-hover {
     display: none;
     width: 24px;
     height: 24px;
     object-fit: contain;
   }
-  
+
   &:hover {
     .arrow-default {
       display: none;
     }
-    
+
     .arrow-hover {
       display: block;
     }
   }
-}
-
-.slider-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  padding: 8px 16px;
-  
-  border-radius: 20px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .swiper-pagination {

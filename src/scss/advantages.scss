@@ -1,0 +1,133 @@
+@import 'swiper/css';
+
+.container {
+  max-width: 320px;
+  padding: 16px;
+}
+
+.advantages {
+  background-color: #504ab6;
+  background-image: url(../img/backgrouns/mobile/advsbgmob.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 48px 0;
+}
+
+.advantages h2 {
+  color: #ffd01e;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.14;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 24px;
+}
+
+.slide-text {
+  padding: 20px;
+  text-align: center;
+
+  h3 {
+    color: #45ff0b;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.14;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.advantages-image-swiper,
+.advantages-text-swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.slide-text {
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+  margin: 0 20px;
+}
+
+.advantages-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    cursor: pointer;
+
+    &::after {
+      display: none;
+    }
+
+    .arrow-default {
+      display: block;
+    }
+
+    .arrow-hover {
+      display: none;
+    }
+
+    &:hover {
+      .arrow-default {
+        display: none;
+      }
+      .arrow-hover {
+        display: block;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    width: auto;
+  }
+}
+
+// Остальные стили...
