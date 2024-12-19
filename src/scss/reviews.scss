@@ -1,0 +1,21 @@
+.reviews {
+    padding: 5rem 0;
+    background-color: #ACCEFE;
+}
+
+.reviews h2{
+    margin-bottom: 3rem;
+    color: #FFD01E;
+    font: 26px, 600;
+    line-height: 1.14;
+    text-align: center;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
