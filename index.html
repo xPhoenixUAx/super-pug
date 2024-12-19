@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/super-pug/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/super-pug/assets/vendor-66f16b76.js">
     <link rel="stylesheet" href="/super-pug/assets/vendor-fef9b9da.css">
-    <link rel="stylesheet" href="/super-pug/assets/index-76978d04.css">
+    <link rel="stylesheet" href="/super-pug/assets/index-f1709b92.css">
   </head>
   <body>
 
@@ -150,19 +150,36 @@
 
 
 <section class="about container">
-    <h2>About</h2>
+    <h2 class="leRainDrop">About</h2>
     <div class="about__content_wrapper">
           <div class="about__content"></div>
-            <img src="./img/about-1.svg" alt="About 1" />
+            <picture>
+                <source srcset="../img/abtus/mob/abt1pic.png" media="(max-width: 288px)">
+                <source srcset="../img/abtus/dsktp/aboutpicsdsktp.png" media="(max-width: 464px)">
+                <img class="about_img" src="../img/abtus/mob/abt1pic.png" alt="About 1" />
+            </picture>
             <p>Super Pug Story is an exciting adventure game that follows the journey of a brave pug hero through a world filled with puzzles, hidden treasures, and heartwarming moments.</p>
     </div>
-        <img src="./img/about-1.svg" alt="About 1" />
+         <picture>
+                <source srcset="../img//abtus/mob/abt2pic.png" media="(max-width: 288px)">
+                <source srcset="../img/abtus/dsktp/abt2pic.png" media="(max-width: 464px)">
+                <img class="about_img" src="../img/abtus/mob/abt2pic.png" alt="About 1" />
+            </picture>
         <p>Perfect for players of all ages, the game blends adventure, puzzle-solving, and storytelling in a delightful way, offering an unforgettable experience that will keep you coming back for more.</p>
     </div>
     <div class="about__content_bottom">
         <div class="about__content_img_bottom">
-            <img src="./img/about-2.svg" alt="About 2" />
-        <img src="./img/about-2.svg" alt="About 2" />
+              <picture>
+                <source srcset="../img/abtus/mob/mobaboutpics.png" media="(max-width: 136px)">
+                <source srcset="../img/abtus/dsktp/abt3pic1.png" media="(max-width: 299px)">
+                <img class="about_img_bottom" src="../img/abtus/mob/mobaboutpics.png" alt="About 1" />
+            </picture>
+        
+            <picture>
+                <source srcset="../img/abtus/mob/abt3pic2.png" media="(max-width: 136px)">
+                <source srcset="../img/abtus/dsktp/abt3pic2.png" media="(max-width: 299px)">
+                <img class="about_img_bottom" src="../img/abtus/mob/abt3pic2.png" alt="About 1" />
+            </picture>
         </div>
         
         <p>Players solve clever puzzles, uncover secrets, and progress through an engaging storyline. </p>
@@ -173,7 +190,7 @@
 
 
 <section class="gallery container">
-    <h2>Gallery</h2>
+    <h2 class="lePeek">Gallery</h2>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <!-- Пример слайдов, добавьте свои изображения -->
