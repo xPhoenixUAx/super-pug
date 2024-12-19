@@ -7,9 +7,9 @@
     <title>Super Pug. Main Page</title>
     
     <script type="module" crossorigin src="/super-pug/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/super-pug/assets/vendor-66f16b76.js">
+    <link rel="modulepreload" crossorigin href="/super-pug/assets/vendor-f8a42b41.js">
     <link rel="stylesheet" href="/super-pug/assets/vendor-fef9b9da.css">
-    <link rel="stylesheet" href="/super-pug/assets/index-ff514fab.css">
+    <link rel="stylesheet" href="/super-pug/assets/index-5118000a.css">
   </head>
   <body>
 
@@ -65,7 +65,7 @@
 
 
 
-<section class="benefits container">
+<section class="benefits container" id="benefits">
   <h2 class="leRainDrop">Benefits</h2>
   <div class="benefits__list">
     <div class="benefits__item">
@@ -233,49 +233,183 @@
 </section>
 
 
-<section class="gallery container">
-    <h2 class="lePeek">Gallery</h2>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <!-- Пример слайдов, добавьте свои изображения -->
-            <div class="swiper-slide"><img src="path/to/image1.jpg" alt="Image 1"></div>
-            <div class="swiper-slide"><img src="path/to/image2.jpg" alt="Image 2"></div>
-            <div class="swiper-slide"><img src="path/to/image3.jpg" alt="Image 3"></div>
-            <div class="swiper-slide"><img src="path/to/image4.jpg" alt="Image 4"></div>
-            <div class="swiper-slide"><img src="path/to/image5.jpg" alt="Image 5"></div>
-            <div class="swiper-slide"><img src="path/to/image6.jpg" alt="Image 6"></div>
-            <div class="swiper-slide"><img src="path/to/image7.jpg" alt="Image 7"></div>
-            <div class="swiper-slide"><img src="path/to/image8.jpg" alt="Image 8"></div>
-            <div class="swiper-slide"><img src="path/to/image9.jpg" alt="Image 9"></div>
-            <div class="swiper-slide"><img src="path/to/image10.jpg" alt="Image 10"></div>
-            <div class="swiper-slide"><img src="path/to/image11.jpg" alt="Image 11"></div>
-            <div class="swiper-slide"><img src="path/to/image12.jpg" alt="Image 12"></div>
-            <div class="swiper-slide"><img src="path/to/image13.jpg" alt="Image 13"></div>
-            <div class="swiper-slide"><img src="path/to/image14.jpg" alt="Image 14"></div>
-            <div class="swiper-slide"><img src="path/to/image15.jpg" alt="Image 15"></div>
-        </div>
-        <!-- Кастомная пагинация -->
-        <div class="swiper-pagination">
-            <div class="swiper-pagination-bullet">
-                <img src="./img/gallery-1.svg" alt="Gallery 1">
-            </div>
-            <div class="swiper-pagination-bullet">
-                <img src="./img/gallery-2.svg" alt="Gallery 2">
-            </div>
-            <div class="swiper-pagination-bullet">
-                <img src="./img/gallery-3.svg" alt="Gallery 3">
-            </div>
-            <div class="swiper-pagination-bullet">
-                <img src="./img/gallery-4.svg" alt="Gallery 4">
-            </div>
-            <div class="swiper-pagination-bullet">
-                <img src="./img/gallery-5.svg" alt="Gallery 5">
-            </div>
-        </div>
+<section class="gallery container" id="gallery" id="gallery">
+  <h2 class="lePeek">Gallery</h2>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Пример слайдов, добавьте свои изображения -->
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic1.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic1.png" alt="Image 1" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic2.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic2.png" alt="Image 2" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic3.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic3.png" alt="Image 3" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic4.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic4.png" alt="Image 4" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic5.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic5.png" alt="Image 5" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic6.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic6.png" alt="Image 6" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic7.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic7.png" alt="Image 7" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic8.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic8.png" alt="Image 8" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic9.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img src="../img/gallerypics/galpic9.png" alt="Image 9" width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic10.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic10.png"
+            alt="Image 10"
+            width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic11.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic11.png"
+            alt="Image 11"
+            width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic12.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic12.png"
+            alt="Image 12"
+            width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic13.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic13.png"
+            alt="Image 13"
+            width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic14.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic14.png"
+            alt="Image 14"
+            width="194px"
+        /></picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source srcset="../img/gallerypics/galpic15.png" width="194px" />
+          <source
+            srcset="../img/gallery/mob/gallery1.png"
+            media="(max-width: 464px)" />
+          <img
+            src="../img/gallerypics/galpic15.png"
+            alt="Image 15"
+            width="194px"
+        /></picture>
+      </div>
+
+
     </div>
-    
+  </div>
+  <div class="slider-controls">
+    <div class="swiper-button-prev">
+        <img src="../img/gallerypics/arrowleft.png" alt="arrow-left" class="arrow-default" />
+        <img src="../img/gallerypics/arrowleftgreen.png" alt="arrow-left" class="arrow-hover" />
+    </div>
+    <div class="swiper-pagination">
+        <img src="../img/gallerypics/pagin.png" alt="pagination" class="pagination-image" />
+    </div>
+    <div class="swiper-button-next">
+        <img src="../img/gallerypics/arrowright.png" alt="arrow-right" class="arrow-default" />
+        <img src="../img/gallerypics/arrowrightпgreen.png" alt="arrow-right" class="arrow-hover" />
+    </div>
+  </div>
+  
 </section>
-    
 
 
     
