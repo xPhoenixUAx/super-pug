@@ -8,7 +8,7 @@
 
 .gallery {
   background-color: #504ab6;
-  background-image: url(../img/backgrouns/mobile/gallerybgmob.jpg);
+  background-image: url(./img/backgrouns/mobile/gallerybgmob.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -216,15 +216,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-    padding: 120px 144px;
-  }
+ 
 
   .gallery {
     background-color: #504ab6;
-    background-image: url(../img/backgrouns/desktop/bgGallerydsktp.jpg),
-      url(../img/backgrouns/desktop/starsgal.png);
+    background-image: url(./img/backgrouns/desktop/bgGallerydsktp.jpg),
+      url(./img/backgrouns/desktop/starsgal.png);
     background-size: cover, cover;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
