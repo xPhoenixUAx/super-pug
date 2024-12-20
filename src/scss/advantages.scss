@@ -94,8 +94,8 @@
   gap: 20px;
   padding: 20px 0;
 
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-advantages-next,
+  .swiper-button-advantages-prev {
     position: relative;
     width: 24px;
     height: 24px;
@@ -127,6 +127,27 @@
   .swiper-pagination {
     position: relative;
     width: auto;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 20px;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 208, 30, 0.5); // Цвет неактивной точки
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    background-color: #ffd01e; // Цвет активной точки
+    transform: scale(1.2); // Увеличиваем активную точку
   }
 }
 
