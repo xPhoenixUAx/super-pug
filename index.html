@@ -5,28 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/super-pug/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super Pug. Main Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     
     <script type="module" crossorigin src="/super-pug/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/super-pug/assets/vendor-c9d76756.js">
     <link rel="stylesheet" href="/super-pug/assets/vendor-0ded8c46.css">
-    <link rel="stylesheet" href="/super-pug/assets/index-8f943cb3.css">
+    <link rel="stylesheet" href="/super-pug/assets/index-5644c5dc.css">
   </head>
   <body>
-
-    
-
-<section class="container">
+    <section class="container">
   <header class="header">
     <div class="header-container">
-      <img class="logo-header" src="#" alt="logo" />
+      <img
+        class="logo-header"
+        src="/super-pug/assets/favicon 16-f380934b.jpg"
+        alt="logo"
+      />
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#"></a>Home</li>
-          <li class="nav-item"><a href="#"></a>Advantages</li>
-          <li class="nav-item"><a href="#"></a>Benefits</li>
-          <li class="nav-item"><a href="#"></a>Reviews</li>
-          <li class="nav-item"><a href="#"></a>About Us</li>
-          <li class="nav-item"><a href="#"></a>Gallery</li>
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Advantages</a></li>
+          <li class="nav-item"><a href="#">Benefits</a></li>
+          <li class="nav-item"><a href="#">Reviews</a></li>
+          <li class="nav-item"><a href="#">About Us</a></li>
+          <li class="nav-item"><a href="#">Gallery</a></li>
         </ul>
       </nav>
       <button type="button" class="menu-btn js-open-menu">
@@ -58,11 +65,35 @@
   </header>
 </section>
 
-<section class="hero">
-  <div class="container"></div>
+    <section class="hero container">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Super Pug Story</h1>
+      <img class="hero-img" src="/super-pug/assets/heropicmob-37bfbb29.png" alt="heroimgt" />
+      <p class="hero-subtitle">
+        Join the Heroic Pug on an Epic Adventure, Solve Fun Puzzles, and Save
+        the Day!
+      </p>
+      <div class="download-btn">
+        <a href="#" class="btn btn-primary">
+          <picture>
+            <source
+              media="(max-width: 1190px)"
+              srcset="data:image/png;base64,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 "
+            />
+            <source
+              media="(min-width: 1200px)"
+              srcset="/super-pug/assets/google-37756645.png "
+            />
+            <img src="data:image/png;base64,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" />
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<link rel="stylesheet" href="../scss/advantages.scss" />
+    <link rel="stylesheet" href="../scss/advantages.scss" />
 
 <section class="advantages container" id="advantages">
   <h2 class="leRainDrop">Advantages</h2>
@@ -241,87 +272,123 @@
 
 
 
-
-
+    
 
 <section class="benefits container" id="benefits">
-  <h2 class="leRainDrop">Benefits</h2>
-  <div class="benefits__list">
-    <div class="benefits__item">
-      <picture class="benefits__img">
-        <source srcset="../img/benefits/mob/ben1.png" width="320px">
-        <source srcset="../img/benefits/mob/bendesk1.png" media="(max-width: 464px)">
-        <img src="../img/benefits/mob/ben1.png" alt="Benefit 1" width="320px" />
-      </picture>
-      <h3>Charming Gameplay</h3>
-      <p>
-        Play a heartwarming and fun adventure with a lovable pug protagonist.
-        The game’s easy-to-learn mechanics make it accessible to all players,
-        while its cleverly designed puzzles provide just the right level of
-        challenge.
-      </p>
-    </div>
+  <div class="benefits-wrap">
+    <h2 class="leRainDrop">Benefits</h2>
+    <div class="benefits__list">
+      <div class="benefits__item">
+        <picture class="benefits__img">
+          <source srcset="../img/benefits/mob/ben1.png" width="320px" />
+          <source
+            srcset="../img/benefits/mob/bendesk1.png"
+            media="(max-width: 464px)"
+          />
+          <img
+            src="../img/benefits/mob/ben1.png"
+            alt="Benefit 1"
+            width="320px"
+          />
+        </picture>
+        <h3>Charming Gameplay</h3>
+        <p>
+          Play a heartwarming and fun adventure with a lovable pug protagonist.
+          The game’s easy-to-learn mechanics make it accessible to all players,
+          while its cleverly designed puzzles provide just the right level of
+          challenge.
+        </p>
+      </div>
 
-    <div class="benefits__item">
-      <picture class="benefits__img">
-        <source srcset="../img/benefits/mob/ben2.png" width="320px">
-        <source srcset="../img/benefits/mob/bendesk2.png" media="(max-width: 464px)">
-        <img src="../img/benefits/mob/ben2.png" alt="Benefit 1" width="320px" />
-      </picture>
-      <h3>Vivid Visuals</h3>
-      <p>
-        Immerse yourself in a beautifully crafted world filled with vibrant
-        colors and adorable characters. The artwork is designed to keep you
-        smiling as you journey through each level.
-      </p>
-    </div>
+      <div class="benefits__item">
+        <picture class="benefits__img">
+          <source srcset="../img/benefits/mob/ben2.png" width="320px" />
+          <source
+            srcset="../img/benefits/mob/bendesk2.png"
+            media="(max-width: 464px)"
+          />
+          <img
+            src="../img/benefits/mob/ben2.png"
+            alt="Benefit 1"
+            width="320px"
+          />
+        </picture>
+        <h3>Vivid Visuals</h3>
+        <p>
+          Immerse yourself in a beautifully crafted world filled with vibrant
+          colors and adorable characters. The artwork is designed to keep you
+          smiling as you journey through each level.
+        </p>
+      </div>
 
-    <div class="benefits__item">
-      <picture class="benefits__img">
-        <source srcset="../img/benefits/mob/ben3.png" width="320px">
-        <source srcset="../img/benefits/mob/bendesk3.png" media="(max-width: 464px)">
-        <img src="../img/benefits/mob/ben3.png" alt="Benefit 3" width="320px" />
-      </picture>
-      <h3>Unique Storytelling</h3>
-      <p>
-        Follow the gripping tale of your pug’s adventures, with multiple
-        surprises and delightful twists along the way. Each chapter adds depth
-        to the story, making it a rewarding experience.
-      </p>
-    </div>
+      <div class="benefits__item">
+        <picture class="benefits__img">
+          <source srcset="../img/benefits/mob/ben3.png" width="320px" />
+          <source
+            srcset="../img/benefits/mob/bendesk3.png"
+            media="(max-width: 464px)"
+          />
+          <img
+            src="../img/benefits/mob/ben3.png"
+            alt="Benefit 3"
+            width="320px"
+          />
+        </picture>
+        <h3>Unique Storytelling</h3>
+        <p>
+          Follow the gripping tale of your pug’s adventures, with multiple
+          surprises and delightful twists along the way. Each chapter adds depth
+          to the story, making it a rewarding experience.
+        </p>
+      </div>
 
-    <div class="benefits__item">
-      <picture class="benefits__img">
-        <source srcset="../img/benefits/mob/ben4.png" width="320px">
-        <source srcset="../img/benefits/mob/bendesk4.png" media="(max-width: 464px)">
-        <img src="../img/benefits/mob/ben4.png" alt="Benefit 4" width="320px" />
-      </picture>
-      <h3>Offline Play</h3>
-      <p>
-        Enjoy the game anywhere, even without an internet connection. Whether
-        you’re at home, on a trip, or just looking to unwind, Super Pug Story is
-        ready whenever you are.
-      </p>
-    </div>
+      <div class="benefits__item">
+        <picture class="benefits__img">
+          <source srcset="../img/benefits/mob/ben4.png" width="320px" />
+          <source
+            srcset="../img/benefits/mob/bendesk4.png"
+            media="(max-width: 464px)"
+          />
+          <img
+            src="../img/benefits/mob/ben4.png"
+            alt="Benefit 4"
+            width="320px"
+          />
+        </picture>
+        <h3>Offline Play</h3>
+        <p>
+          Enjoy the game anywhere, even without an internet connection. Whether
+          you’re at home, on a trip, or just looking to unwind, Super Pug Story
+          is ready whenever you are.
+        </p>
+      </div>
 
-    <div class="benefits__item">
-      <picture class="benefits__img">
-        <source srcset="../img/benefits/mob/ben5.png" width="320px">
-        <source srcset="../img/benefits/mob/bendesk5.png" media="(max-width: 464px)">
-        <img src="../img/benefits/mob/ben5.png" alt="Benefit 5" width="320px" />
-      </picture>
-      <h3>Engaging Puzzle Mechanics</h3>
-      <p>
-        The puzzles aren’t just about solving challenges; they also unlock
-        pieces of the story. Every successful puzzle brings you closer to
-        understanding the mysteries of the world.
-      </p>
+      <div class="benefits__item">
+        <picture class="benefits__img">
+          <source srcset="../img/benefits/mob/ben5.png" width="320px" />
+          <source
+            srcset="../img/benefits/mob/bendesk5.png"
+            media="(max-width: 464px)"
+          />
+          <img
+            src="../img/benefits/mob/ben5.png"
+            alt="Benefit 5"
+            width="320px"
+          />
+        </picture>
+        <h3>Engaging Puzzle Mechanics</h3>
+        <p>
+          The puzzles aren’t just about solving challenges; they also unlock
+          pieces of the story. Every successful puzzle brings you closer to
+          understanding the mysteries of the world.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 
-
+    
 
 <section class="reviews container">
     <h2 class="leRainDrop">Reviews</h2>
@@ -370,7 +437,7 @@
         </li>
     </ul>
 </section>
-
+    
 
 <section class="about container">
     <h2 class="leRainDrop">About</h2>
@@ -410,7 +477,7 @@
     </div>
       
 </section>
-
+    
 
 <section class="gallery container">
   <h2 class="lePeek">Gallery</h2>
@@ -609,10 +676,7 @@
   
 </section>
 
-
     
-   
-   
 
     
   </body>
