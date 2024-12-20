@@ -1,10 +1,11 @@
 @import 'swiper/css';
 
-/*.container {
+
+.container {
   max-width: 320px;
   padding: 16px;
 }
-*/
+
 .gallery {
   background-color: #504ab6;
   background-image: url(../img/backgrouns/mobile/gallerybgmob.jpg);
@@ -18,7 +19,14 @@
   height: auto;
 }
 
+.swiper-wrapper {
+  display: flex;
+}
+
 .swiper-slide {
+  flex-shrink: 0;
+  width: calc(33.33% - 20px);
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,4 +213,20 @@
   border-radius: 50%; // Скругление
   transform: translate(-50%, -50%); // Центрируем по вертикали
   transition: left 0.3s ease; // Плавный переход
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 120px 144px;
+  }
+
+  .gallery {
+    background-color: #504ab6;
+    background-image: url(../img/backgrouns/desktop/bgGallerydsktp.jpg),
+      url(../img/backgrouns/desktop/starsgal.png);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
 }

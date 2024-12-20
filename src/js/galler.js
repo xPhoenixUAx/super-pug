@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgressBar(this);
       },
     },
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
   });
 
   // Функция обновления прогресс-бара
