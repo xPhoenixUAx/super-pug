@@ -1,0 +1,66 @@
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.hero-title {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 150%;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.hero-subtitle {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-content {
+    display: block;
+    flex-direction: initial;
+    align-items: initial;
+    gap: initial;
+  }
+  .hero {
+    width: 1200px;
+    height: 780px;
+    background-image: url('../img/mobile/dsk/heropic.png'),
+      url('../img/mobile/dsk/confettihome.png');
+    background-position: center, bottom;
+    background-repeat: no-repeat;
+  }
+  .hero-img {
+    display: none;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 120px;
+    padding-left: 144px;
+  }
+
+  .hero-title {
+    max-width: 468px;
+    font-size: 54px;
+    font-weight: 800;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    font-weight: 600;
+    max-width: 440px;
+    font-size: 32px;
+    text-align: left;
+  }
+}

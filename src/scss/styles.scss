@@ -1,6 +1,7 @@
 @import './header.scss';
 @import './vite-promo.scss';
 @import './global.css';
+@import './hero.css';
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -8,7 +9,7 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(250, 250, 250, 0.87);
+  background: linear-gradient(90deg, #504ab6 30%, #5366df 70%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

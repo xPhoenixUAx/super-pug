@@ -111,12 +111,14 @@
 @media screen and (min-width: 1200px) {
   .header {
     width: 1200px;
+    height: 64px;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0px;
     left: 50%;
     z-index: 1000;
+    margin-bottom: 10px;
   }
   .nav-list {
     display: flex;
