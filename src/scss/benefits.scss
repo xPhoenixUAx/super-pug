@@ -1,8 +1,8 @@
-/*.container {
-  max-width: 320px;
-  padding: 0 16px;
-  padding-top: 48px;
-}
+// .container {
+//   max-width: 320px;
+//   padding: 0 16px;
+//   padding-top: 48px;
+// }
 
 /*.benefits {
   padding: 5rem 0;
@@ -96,10 +96,81 @@
 }
 
 .benefits__img {
-  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    padding-bottom: 4px;
+  }
 }
 
-.benefits__img img {
-  border-radius: 16px;
-  padding-bottom: 4px;
+@media (min-width: 1200px) {
+  .benefits {
+    background-image: url(../img/backgrouns/desktop/benefitsclouds.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 56px;
+    margin-top: 56px;
+  }
+
+  .benefits h2 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 40px;
+  }
+
+  .benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .benefits__item:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 600px;
+  }
+
+  .benefits__item {
+    margin: 0;
+    justify-self: center;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits p {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 16px;
+    font-size: 18px;
+    line-height: 37px;
+  }
+
+  .benefits h3 {
+    text-align: center;
+
+    padding-top: 16px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .benefits__img {
+    max-width: 630px;
+  }
+
+  .benefits__item:first-child .benefits__img {
+    max-width: 646px;
+  }
 }

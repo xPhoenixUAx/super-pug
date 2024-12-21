@@ -1,9 +1,9 @@
 @import 'swiper/css';
 
-/*.container {
-  max-width: 320px;
-  padding: 16px;
-}
+// .container {
+//   max-width: 320px;
+//   padding: 16px;
+// }
 
 /*.advantages {
   background-color: #504ab6;
@@ -140,13 +140,13 @@
 .pagination-dot {
   width: 8px;
   height: 8px;
-  background-color: rgba(255, 208, 30, 0.5); // Цвет неактивной точки
+  background-color: #ffd01e; // Цвет неактивной точки
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &.active {
-    background-color: #ffd01e; // Цвет активной точки
+    background-color: #ff232a; // Цвет активной точки
     transform: scale(1.2); // Увеличиваем активную точку
   }
 }
