@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}*/
+}
 
 .benefits {
   background: radial-gradient(
@@ -24,7 +24,7 @@
   background-image: url('./img/mobile/dsk/cloudssunbenefitsdsktp.png');
   background-repeat: no-repeat;
   background-position: top;
-}
+}*/
 
 .benefits__list {
   display: flex;
@@ -108,13 +108,25 @@
 }
 
 @media (min-width: 1200px) {
-  .benefits {
+  /*.benefits {
     background-image: url(../img/backgrouns/desktop/benefitsclouds.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin-bottom: 56px;
     margin-top: 56px;
+  }*/
+  .benefits {
+    background: radial-gradient(
+      61.85% 78.91% at 50% 98.81%,
+      #accefe 0%,
+      #529aff 100%
+    );
+  }
+  .benefits-wrap {
+    background-image: url('../img/mobile/dsk/cloudssunbenefitsdsktp.png');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .benefits h2 {
