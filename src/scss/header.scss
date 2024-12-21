@@ -24,8 +24,8 @@
 }
 
 .logo-header {
-  width: 48px;
-  height: 33px;
+  width: 24px;
+  height: 24px;
 }
 
 .menu-btn {
@@ -108,7 +108,11 @@
   height: 32px;
   background-color: #085e84;
 }
+
 @media screen and (min-width: 1200px) {
+  .menu-btn {
+    display: none;
+  }
   .header {
     width: 1200px;
     height: 64px;
@@ -120,33 +124,53 @@
     z-index: 1000;
     margin-bottom: 10px;
   }
+  .header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .logo-header {
+    width: 40px;
+    height: 40px;
+  }
   .nav-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 auto;
     margin: 0 auto;
-    color: black;
-    gap: 24px;
+    gap: 26px;
+  }
+  .nav-item {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-shadow: 1px 1px 2px 0 rgba(15, 11, 89, 0.3);
+    color: #ffffff;
   }
   .nav-link {
     padding: 4px;
     margin: 0 auto;
+    width: 111px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
   }
   .nav-link:hover,
   .nav-link:focus {
-    outline: 0.5px solid #085e84;
-    border-radius: 4px;
-    width: 60px;
-    height: 32px;
-    padding: 0 auto;
+    outline: 0.5px solid #ffd01e;
+    border-radius: 8px;
   }
   .nav-link:active {
-    outline: 0.5px solid #085e84;
-    border-radius: 4px;
-    width: 60px;
-    height: 32px;
-    background-color: #e0f3fe;
+    outline: 0.5px solid #ffd01e;
+    border-radius: 8px;
+    background-color: #ffd01e;
+    text-decoration: underline;
+    color: #000000;
+    text-shadow: 1px 1px 2px 0 rgba(15, 11, 89, 0.3);
   }
 }
 /*.header {

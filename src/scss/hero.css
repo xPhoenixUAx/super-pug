@@ -1,3 +1,6 @@
+.hero {
+  background: linear-gradient(90deg, #504ab6 30%, #5366df 70%);
+}
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -12,6 +15,7 @@
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
+  padding-top: 72px;
 }
 .hero-subtitle {
   font-family: 'Baloo 2', sans-serif;
@@ -21,7 +25,9 @@
   text-align: center;
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin: 20px 0;
+}
+.download-btn {
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -32,6 +38,7 @@
     gap: initial;
   }
   .hero {
+    background: initial;
     width: 1200px;
     height: 780px;
     background-image: url('../img/mobile/dsk/heropic.png'),

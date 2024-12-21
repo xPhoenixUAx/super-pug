@@ -1,0 +1,26 @@
+.footer-wraper {
+  font-family: 'Raleway', sans-serif;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #accefe 23.73%, #3783ef 100%);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wraper {
+    font-family: 'Raleway', sans-serif;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, #accefe 23.73%, #3783ef 100%);
+  }
+  .footer-google {
+    width: 156px;
+    height: 48px;
+  }
+  .privacy {
+    text-decoration: underline;
+  }
+}
