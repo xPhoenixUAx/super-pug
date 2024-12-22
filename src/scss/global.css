@@ -1,7 +1,10 @@
+h2 {
+  padding-top: 48px;
+}
 .container {
   width: 320px;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 16px auto;
 }
 
 @media screen and (min-width: 1200px) {

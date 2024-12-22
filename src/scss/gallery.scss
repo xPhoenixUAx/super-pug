@@ -5,13 +5,15 @@
   padding: 16px;
 }*/
 
-.gallery {
-  background-image: url('../img/backgrouns/mobile/gallerybgmob.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+// .gallery {
+//   background-image: url('../img/backgrouns/mobile/gallerybgmob.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+.gallery-bg {
+  background: linear-gradient(90deg, #504ab6 30%, #5366df 70%);
 }
-
 .gallery-container {
   position: relative;
 }
@@ -72,7 +74,7 @@
   width: 100%;
   padding: 8px 16px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .swiper-button-prev,

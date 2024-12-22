@@ -21,11 +21,17 @@
   );
 }
 .benefits-wrap {
-  background-image: url('./img/mobile/dsk/cloudssunbenefitsdsktp.png');
+  background-image: url('../img/mobile/dsk/cloudssunbenefitsdsktp.png');
   background-repeat: no-repeat;
   background-position: top;
 }*/
-
+.benefits-bg {
+  background: radial-gradient(
+    61.85% 78.91% at 50% 98.81%,
+    #accefe 0%,
+    #529aff 100%
+  );
+}
 .benefits__list {
   display: flex;
   flex-direction: column;
@@ -42,7 +48,7 @@
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-bottom: 24px;
-  margin-top: 48px;
+  /*margin-top: 48px;*/
 }
 .leRainDrop {
   animation: leRainDrop 1.5s ease-in-out infinite;
@@ -115,14 +121,14 @@
     background-position: center;
     margin-bottom: 56px;
     margin-top: 56px;
-  }*/
+
   .benefits {
     background: radial-gradient(
       61.85% 78.91% at 50% 98.81%,
       #accefe 0%,
       #529aff 100%
     );
-  }
+  }}*/
   .benefits-wrap {
     background-image: url('../img/mobile/dsk/cloudssunbenefitsdsktp.png');
     background-repeat: no-repeat;

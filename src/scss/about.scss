@@ -4,15 +4,19 @@
 // }
 
 .about {
-  background: url(../img//backgrouns/mobile/bgAbtUsmob.jpg) no-repeat center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
 }
-
+.about-bg {
+  background: radial-gradient(
+    68.72% 87.7% at 52.34% 99.75%,
+    #accefe 69.13%,
+    #529aff 100%
+  );
+}
 .about_img {
   align-items: center;
   justify-content: center;
@@ -57,7 +61,7 @@
   font: 26px, 600;
   line-height: 1.14;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(15,11,89,0.3);
+  text-shadow: 1px 1px 2px rgba(15, 11, 89, 0.3);
 }
 
 .leRainDrop {
@@ -98,7 +102,7 @@
   font: 16px, 500;
   line-height: 1.14;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(15,11,89,0.3);
+  text-shadow: 1px 1px 2px rgba(15, 11, 89, 0.3);
 }
 
 @media (min-width: 1200px) {
@@ -131,10 +135,10 @@
 
     .about__content_img_bottom {
       display: flex;
-      flex-direction: row; 
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 64px; 
+      gap: 64px;
 
       p {
         margin: 0; // Убираем отступы
@@ -144,6 +148,6 @@
   }
 
   .about__content_img_bottom_text {
-   width: 298px;
+    width: 298px;
   }
 }
