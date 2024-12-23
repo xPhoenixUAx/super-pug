@@ -1,9 +1,46 @@
 .footer-wraper {
   font-family: 'Raleway', sans-serif;
-  height: 160px;
+  padding: 48px 16px 20px 16px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #accefe 23.73%, #3783ef 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(172, 206, 254, 1) 0%,
+    rgba(55, 131, 239, 1) 15%
+  );
+  align-items: center;
+  color: #fafafa;
+}
+.privacy {
+  text-decoration: underline;
+}
+.footer-google {
+  width: 130px;
+  height: 40px;
+}
+.text-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.terms-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 32px;
+  padding-top: 24px;
+}
+.footer-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  padding-top: 24px;
 }
 
 @media screen and (min-width: 1200px) {
