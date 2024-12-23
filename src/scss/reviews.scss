@@ -1,18 +1,24 @@
-.container {
-  max-width: 320px;
-  padding: 16px;
+// .container {
+//   max-width: 320px;
+//   padding: 16px;
+// }
+
+// .reviews {
+//   background-color: #accefe;
+//   background-image: url(./img/reviewsphoneswithpics/reviwesbgmob.png);
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+
+//   width: 100%;
+// }
+.reviews-bg {
+  background: radial-gradient(
+    52.03% 66.38% at 50% 57.09%,
+    #accefe 21.4%,
+    #529aff 66.06%
+  );
 }
-
-.reviews {
-  background-color: #accefe;
-  background-image: url(./img/reviewsphoneswithpics/reviwesbgmob.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  width: 100%;
-}
-
 .reviews h2 {
   margin-bottom: 24px;
   color: #ffd01e;
@@ -21,7 +27,7 @@
   text-align: center;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 48px;
+  /*margin-top: 48px;*/
 }
 
 .reviews__list {
