@@ -1,3 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-timeline: --page-scroll block;
+  animation: smoothScroll 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+@keyframes smoothScroll {
+  from {
+    scroll-behavior: auto;
+  }
+  to {
+    scroll-behavior: smooth;
+  }
+}
+
 h2 {
   padding-top: 48px;
 }
