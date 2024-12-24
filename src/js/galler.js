@@ -4,20 +4,18 @@ import { Navigation } from 'swiper/modules';
 const gallerySwiper = new Swiper('.gallery-swiper', {
   modules: [Navigation],
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 10,
   loop: true,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
   loopFillGroupWithBlank: true,
 
-  
-  speed: 800, 
-  effect: 'slide', 
-  easing: 'ease-in-out', 
+  speed: 800,
+  effect: 'slide',
+  easing: 'ease-in-out',
 
-  
   autoplay: {
-    delay: 3000, 
-    disableOnInteraction: false, 
+    delay: 3000,
+    disableOnInteraction: false,
   },
 
   navigation: {
@@ -26,48 +24,50 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      slidesPerGroup: 1,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesPerGroup: 2,
-    },
     1200: {
       slidesPerView: 3,
-      spaceBetween: 110,
+      spaceBetween: 20,
       slidesPerGroup: 3,
+    },
+  },
+
+  on: {
+    slideChange: function () {
+      const dots = document.querySelectorAll('.slider-dots-gallery .dot');
+      const isDesktop = window.innerWidth >= 1200;
+
+      if (isDesktop) {
+        // Логика для десктопа (группы по 3 слайда)
+        const currentPage = Math.floor(this.realIndex / 3);
+        dots.forEach((dot, index) => {
+          if (index === currentPage) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      } else {
+        // Логика для мобильной версии (по одному слайду)
+        dots.forEach((dot, index) => {
+          if (index === this.realIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
     },
   },
 });
 
 const dots = document.querySelectorAll('.slider-dots-gallery .dot');
-const totalSlides = document.querySelectorAll(
-  '.gallery-swiper .swiper-slide'
-).length;
-const slidesPerPage = 3; 
-const totalPages = Math.ceil(totalSlides / slidesPerPage);
-
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    dots.forEach(d => d.classList.remove('active'));
-    dot.classList.add('active');
-
-    const slideIndex = index * slidesPerPage;
-    gallerySwiper.slideTo(slideIndex);
-  });
-});
-
-gallerySwiper.on('slideChange', () => {
-  const currentPage = Math.floor(gallerySwiper.realIndex / slidesPerPage);
-  dots.forEach((dot, index) => {
-    if (index === currentPage) {
-      dot.classList.add('active');
+    const isDesktop = window.innerWidth >= 1200;
+    if (isDesktop) {
+      gallerySwiper.slideTo(index * 3);
     } else {
-      dot.classList.remove('active');
+      gallerySwiper.slideTo(index);
     }
   });
 });
