@@ -248,6 +248,10 @@
 
   .swiper-slide {
     margin-right: 10px;
+
+    img {
+      width: 250px;
+    }
   }
 
   .swiper-button-prev {
@@ -266,5 +270,10 @@
   .slider-controls {
     max-width: 200px;
     margin: 30px auto;
+  }
+
+  .gallery-img-wrap {
+    background-image: url('../img/mobile/dsk/gal1dsktp.png');
+    background-repeat: no-repeat;
   }
 }
