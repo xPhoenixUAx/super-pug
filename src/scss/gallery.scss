@@ -38,7 +38,7 @@
   align-items: center;
 
   img {
-    width: 100%;
+    width: 182px;
     height: auto;
   }
 }
@@ -159,7 +159,7 @@
   position: relative;
   width: 96px;
   height: 6px;
-  background-color: #ffd01e;
+  background-color: #FFD01E;
   border-radius: 3px;
   overflow: hidden;
   margin: 0;
@@ -186,16 +186,44 @@
   }
 
   .swiper {
-    width: 70%;
+    width: 85%;
   }
 
   .progress-bar-custom {
-    margin: 0 4px;
-    width: 144px;
+    width: auto;
+    height: auto;
+    background: none;
+    display: flex;
+    gap: 8px;
+    
+    .slider-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .dot {
+        width: 16px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #FFD01E;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active {
+          width: 48px;
+          background-color: #FF232A;
+          transform: scale(1);
+        }
+      }
+    }
+    
+    .red-dot-custom {
+      display: none;
+    }
   }
 
   .swiper-slide {
-    margin-right: 113px; // Установите расстояние между слайдами
+    margin-right: 90px;
   }
 
   .swiper-button-prev {
@@ -210,4 +238,44 @@
     line-height: 48px;
     text-shadow: 1px 1px 2px rgba(15, 11, 89, 0.3);
   }
+<<<<<<< Updated upstream
+=======
+
+  .slider-controls {
+    max-width: 100%;
+    .slider-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .dot {
+        width: 16px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #ffd01e;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active {
+          width: 48px;
+          background-color: #ff232a;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .pagination-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffd01e; // Желтый цвет для неактивных точек
+    border-radius: 50%;
+
+    &.active {
+      width: 8px; // Изменено с 32px на 8px, чтобы точка была круглой
+      background-color: #ff232a; // Красный цвет для активной точки
+      border-radius: 50%;
+    }
+  }
+>>>>>>> Stashed changes
 }

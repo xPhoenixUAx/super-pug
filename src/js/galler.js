@@ -14,31 +14,68 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     on: {
       init: function () {
-        updateProgressBar(this);
+        updatePagination(this);
       },
       slideChange: function () {
-        updateProgressBar(this);
+        updatePagination(this);
       },
     },
     breakpoints: {
       1200: {
         slidesPerView: 3,
         spaceBetween: 30,
+        slidesPerGroup: 3,
       },
     },
   });
 
-  // Функция обновления прогресс-бара
-  function updateProgressBar(swiper) {
-    const progressBar = document.querySelector('.progress-bar-custom');
-    const redDot = document.querySelector('.red-dot-custom');
-    if (!progressBar || !redDot) return;
+  function updatePagination(swiper) {
+    const isDesktop = window.innerWidth >= 1200;
+    const dots = document.querySelectorAll('.slider-dots .dot');
 
-    const totalSlides = swiper.slides.length;
-    const progress = swiper.activeIndex / (totalSlides - 1); // Рассчитываем прогресс
-    const barWidth = progressBar.offsetWidth;
+    if (isDesktop) {
+  
+      dots.forEach(dot => dot.classList.remove('active'));
 
-    // Устанавливаем положение красной точки
-    redDot.style.left = `${progress * barWidth}px`;
+      
+      const currentGroup = Math.floor(swiper.activeIndex / 3);
+      const totalGroups = Math.ceil(swiper.slides.length / 3);
+
+      
+      const safeCurrentGroup = Math.min(currentGroup, totalGroups - 1);
+
+      
+      if (dots[safeCurrentGroup]) {
+        dots[safeCurrentGroup].classList.add('active');
+      }
+    } else {
+      
+      const progressBar = document.querySelector('.progress-bar-custom');
+      const redDot = document.querySelector('.red-dot-custom');
+      if (!progressBar || !redDot) return;
+
+      const totalSlides = swiper.slides.length;
+      const progress = swiper.activeIndex / (totalSlides - 1);
+      const barWidth = progressBar.offsetWidth;
+
+      redDot.style.left = `${Math.max(
+        0,
+        Math.min(progress * barWidth, barWidth)
+      )}px`;
+    }
   }
+
+  // Добавляем обработчики кликов по точкам
+  const dots = document.querySelectorAll('.slider-dots .dot');
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const slidesPerGroup = window.innerWidth >= 1200 ? 3 : 1;
+      gallerySwiper.slideTo(index * slidesPerGroup);
+    });
+  });
+
+  // Обработка изменения размера окна
+  window.addEventListener('resize', () => {
+    updatePagination(gallerySwiper);
+  });
 });
