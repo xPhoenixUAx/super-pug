@@ -32,17 +32,16 @@
 }
 
 .reviews__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px; /* отступ между колонками */
-    row-gap: 8px; /* отступ между рядами */
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px; /* отступ между колонками */
+  row-gap: 8px; /* отступ между рядами */
+}
 
-  .reviews__item img {
-    width: 100%;
-    height: auto;
-   
-  }
+.reviews__item img {
+  width: 100%;
+  height: auto;
+}
 
 .leRainDrop {
   animation: leRainDrop 1.5s ease-in-out infinite;
@@ -99,18 +98,57 @@
   }
 
   .reviews__item:nth-child(1) {
-    grid-column: 2; 
-    grid-row: 1; 
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .reviews__item:nth-child(2) {
-    grid-column: 1; 
-    grid-row: 1; 
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .reviews__item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .reviews__item img {
+    width: 240px;
+    animation: trembling 0.5s ease-in-out infinite;
+  }
+
+  .reviews__item:nth-child(1) img {
+    animation: trembling 0.5s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+
+  .reviews__item:nth-child(2) img {
+    animation: trembling 0.5s ease-in-out infinite;
+    animation-delay: 0.1s;
+  }
+
+  .reviews__item:nth-child(3) img {
+    animation: trembling 0.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes trembling {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1px, 1px);
+    }
+    50% {
+      transform: translate(-1px, -1px);
+    }
+    75% {
+      transform: translate(-1px, 1px);
+    }
   }
 }
 
 .reviews__item img {
   width: 240px;
-  
-  
 }
