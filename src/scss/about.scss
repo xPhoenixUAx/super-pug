@@ -154,15 +154,15 @@
 
   .about_img {
     display: flex;
-    flex-direction: row; // Изменяем направление на строку
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 16px; // Добавляем промежуток между изображениями
+    gap: 16px;
   }
 
   .about_img_item {
     display: flex;
-    flex-direction: column; // Изображение и текст в колонке
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -181,18 +181,27 @@
       flex-wrap: nowrap;
       align-items: center;
       justify-content: center;
-      gap: 30px;
       margin-bottom: 64px;
+      width: 900px;
+
+      > * {
+        flex: 0 0 299px;
+        max-width: 299px;
+        min-width: 299px;
+        &:first-child {
+          margin-right: 550px;
+        }
+      }
 
       p {
         flex-basis: auto;
-        margin-left: 0;
-        margin-right: 0;
         order: 0;
-        width: 298px;
-        max-width: 298px;
-        margin-top: 0;
+        margin: 0;
+        max-width: 299px;
         padding: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
