@@ -38,7 +38,8 @@
   align-items: center;
 
   img {
-    width: 100%;
+    width: 182px;
+    width: 182px;
     height: auto;
   }
 }
@@ -159,7 +160,8 @@
   position: relative;
   width: 96px;
   height: 6px;
-  background-color: #ffd01e;
+  background-color: #FFD01E;
+  background-color: #FFD01E;
   border-radius: 3px;
   overflow: hidden;
   margin: 0;
@@ -186,7 +188,8 @@
   // }
 
   .swiper {
-    width: 70%;
+    width: 85%;
+    width: 85%;
   }
   .img-bg {
     background-image: url('../img/mobile/dsk/gal1dsktp.png');
@@ -196,12 +199,71 @@
   }
 
   .progress-bar-custom {
-    margin: 0 4px;
-    width: 144px;
+    width: auto;
+    height: auto;
+    background: none;
+    display: flex;
+    gap: 8px;
+    
+    .slider-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .dot {
+        width: 16px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #FFD01E;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active {
+          width: 48px;
+          background-color: #FF232A;
+          transform: scale(1);
+        }
+      }
+    }
+    
+    .red-dot-custom {
+      display: none;
+    }
+    width: auto;
+    height: auto;
+    background: none;
+    display: flex;
+    gap: 8px;
+    
+    .slider-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .dot {
+        width: 16px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #FFD01E;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active {
+          width: 48px;
+          background-color: #FF232A;
+          transform: scale(1);
+        }
+      }
+    }
+    
+    .red-dot-custom {
+      display: none;
+    }
   }
 
   .swiper-slide {
-    margin-right: 113px; // Установите расстояние между слайдами
+    margin-right: 90px;
+    margin-right: 90px;
   }
 
   .swiper-button-prev {
