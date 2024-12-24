@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Инициализация слайдера для картинок
   const imageSwiper = new Swiper('.advantages-image-swiper', {
     modules: [Navigation, Pagination, Controller],
     slidesPerView: 1,
@@ -24,14 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // Инициализация слайдера для текста
   const textSwiper = new Swiper('.advantages-text-swiper', {
     modules: [Controller],
     slidesPerView: 1,
     spaceBetween: 30,
   });
 
-  // Синхронизация слайдеров
   imageSwiper.controller.control = textSwiper;
   textSwiper.controller.control = imageSwiper;
 
@@ -76,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Добавляем клики по точкам
   dots.forEach((dot, index) => {
     dot.addEventListener('click', e => {
       e.preventDefault();
@@ -106,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(nextIndex);
   });
 
-  // Добавляем управление с клавиатуры
   document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') {
       prevButton.click();
@@ -115,24 +110,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Инициализация начального состояния
   updateDots(getCurrentSlideIndex());
   updateTextSlide(getCurrentSlideIndex());
 });
 
-// Функция создания кастомной пагинации
 function createCustomPagination(swiper) {
   const paginationContainer = document.querySelector('.swiper-pagination');
   if (!paginationContainer) return;
 
-  paginationContainer.innerHTML = ''; // Очищаем контейнер
+  paginationContainer.innerHTML = ''; 
 
   swiper.slides.forEach((_, index) => {
     const dot = document.createElement('div');
     dot.classList.add('pagination-dot');
     if (index === swiper.activeIndex) dot.classList.add('active');
 
-    // Добавляем обработчик клика
     dot.addEventListener('click', () => {
       swiper.slideTo(index);
     });
@@ -141,7 +133,6 @@ function createCustomPagination(swiper) {
   });
 }
 
-// Функция обновления кастомной пагинации
 function updateCustomPagination(swiper) {
   const dots = document.querySelectorAll('.pagination-dot');
   dots.forEach((dot, index) => {

@@ -9,24 +9,22 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   slidesPerGroup: 3,
   loopFillGroupWithBlank: true,
 
-  // Добавляем параметры для плавности
-  speed: 800, // Скорость анимации прокрутки (в мс)
-  effect: 'slide', // Эффект перехода
-  easing: 'ease-in-out', // Функция плавности
+  
+  speed: 800, 
+  effect: 'slide', 
+  easing: 'ease-in-out', 
 
-  // Добавляем автоматическую прокрутку с задержкой
+  
   autoplay: {
-    delay: 3000, // Задержка между прокруткой (в мс)
-    disableOnInteraction: false, // Продолжать автопрокрутку после взаимодействия пользователя
+    delay: 3000, 
+    disableOnInteraction: false, 
   },
 
-  // Настройка кнопок навигации с новыми классами
   navigation: {
     nextEl: '.swiper-button-gallery-next',
     prevEl: '.swiper-button-gallery-prev',
   },
 
-  // Настройки для разных размеров экрана
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -46,28 +44,23 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 });
 
-// Обработка точек навигации
 const dots = document.querySelectorAll('.slider-dots-gallery .dot');
 const totalSlides = document.querySelectorAll(
   '.gallery-swiper .swiper-slide'
 ).length;
-const slidesPerPage = 3; // Количество видимых слайдов на странице
+const slidesPerPage = 3; 
 const totalPages = Math.ceil(totalSlides / slidesPerPage);
 
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    // Убираем активный класс у всех точек
     dots.forEach(d => d.classList.remove('active'));
-    // Добавляем активный класс текущей точке
     dot.classList.add('active');
 
-    // Переключаем на нужный слайд с учетом группировки
     const slideIndex = index * slidesPerPage;
     gallerySwiper.slideTo(slideIndex);
   });
 });
 
-// Обновление активной точки при смене слайда
 gallerySwiper.on('slideChange', () => {
   const currentPage = Math.floor(gallerySwiper.realIndex / slidesPerPage);
   dots.forEach((dot, index) => {
