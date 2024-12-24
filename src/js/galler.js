@@ -1,81 +1,80 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation } from 'swiper/modules';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const gallerySwiper = new Swiper('.gallery-swiper', {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+const gallerySwiper = new Swiper('.gallery-swiper', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  slidesPerGroup: 3,
+  loopFillGroupWithBlank: true,
+
+  // Добавляем параметры для плавности
+  speed: 800, // Скорость анимации прокрутки (в мс)
+  effect: 'slide', // Эффект перехода
+  easing: 'ease-in-out', // Функция плавности
+
+  // Добавляем автоматическую прокрутку с задержкой
+  autoplay: {
+    delay: 3000, // Задержка между прокруткой (в мс)
+    disableOnInteraction: false, // Продолжать автопрокрутку после взаимодействия пользователя
+  },
+
+  // Настройка кнопок навигации с новыми классами
+  navigation: {
+    nextEl: '.swiper-button-gallery-next',
+    prevEl: '.swiper-button-gallery-prev',
+  },
+
+  // Настройки для разных размеров экрана
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
     },
-    on: {
-      init: function () {
-        updatePagination(this);
-      },
-      slideChange: function () {
-        updatePagination(this);
-      },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      slidesPerGroup: 2,
     },
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-      },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 110,
+      slidesPerGroup: 3,
     },
+  },
+});
+
+// Обработка точек навигации
+const dots = document.querySelectorAll('.slider-dots-gallery .dot');
+const totalSlides = document.querySelectorAll(
+  '.gallery-swiper .swiper-slide'
+).length;
+const slidesPerPage = 3; // Количество видимых слайдов на странице
+const totalPages = Math.ceil(totalSlides / slidesPerPage);
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    // Убираем активный класс у всех точек
+    dots.forEach(d => d.classList.remove('active'));
+    // Добавляем активный класс текущей точке
+    dot.classList.add('active');
+
+    // Переключаем на нужный слайд с учетом группировки
+    const slideIndex = index * slidesPerPage;
+    gallerySwiper.slideTo(slideIndex);
   });
+});
 
-  function updatePagination(swiper) {
-    const isDesktop = window.innerWidth >= 1200;
-    const dots = document.querySelectorAll('.slider-dots .dot');
-
-    if (isDesktop) {
-  
-      dots.forEach(dot => dot.classList.remove('active'));
-
-      
-      const currentGroup = Math.floor(swiper.activeIndex / 3);
-      const totalGroups = Math.ceil(swiper.slides.length / 3);
-
-      
-      const safeCurrentGroup = Math.min(currentGroup, totalGroups - 1);
-
-      
-      if (dots[safeCurrentGroup]) {
-        dots[safeCurrentGroup].classList.add('active');
-      }
-    } else {
-      
-      const progressBar = document.querySelector('.progress-bar-custom');
-      const redDot = document.querySelector('.red-dot-custom');
-      if (!progressBar || !redDot) return;
-
-      const totalSlides = swiper.slides.length;
-      const progress = swiper.activeIndex / (totalSlides - 1);
-      const barWidth = progressBar.offsetWidth;
-
-      redDot.style.left = `${Math.max(
-        0,
-        Math.min(progress * barWidth, barWidth)
-      )}px`;
-    }
-  }
-
-  // Добавляем обработчики кликов по точкам
-  const dots = document.querySelectorAll('.slider-dots .dot');
+// Обновление активной точки при смене слайда
+gallerySwiper.on('slideChange', () => {
+  const currentPage = Math.floor(gallerySwiper.realIndex / slidesPerPage);
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      const slidesPerGroup = window.innerWidth >= 1200 ? 3 : 1;
-      gallerySwiper.slideTo(index * slidesPerGroup);
-    });
-  });
-
-  // Обработка изменения размера окна
-  window.addEventListener('resize', () => {
-    updatePagination(gallerySwiper);
+    if (index === currentPage) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
   });
 });
