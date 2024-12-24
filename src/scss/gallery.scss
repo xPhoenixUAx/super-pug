@@ -180,16 +180,22 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .gallery {
-    background-image: url(./img/backgrouns/desktop/bgGallerydsktp.jpg),
-      url('../img/backgrouns/desktop/starsgal.png');
-    background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
-  }
+  // .gallery {
+  //   background-image: url(./img/backgrouns/desktop/bgGallerydsktp.jpg),
+  //     url('../img/backgrouns/desktop/starsgal.png');
+  //   background-position: center, center;
+  //   background-repeat: no-repeat, no-repeat;
+  // }
 
   .swiper {
     width: 85%;
     width: 85%;
+  }
+  .img-bg {
+    background-image: url('../img/mobile/dsk/gal1dsktp.png');
+  }
+  .gallery-bg {
+    padding-bottom: 56px;
   }
 
   .progress-bar-custom {
