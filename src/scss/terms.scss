@@ -127,11 +127,20 @@ li:last-child {
   body {
     width: 1200px;
   }
+  .container {
+    padding: 120px 120 56px 120px;
+  }
+  .terms-sect {
+    padding: 120px 120px 56px 120px;
+  }
   .privacy-head {
     font-weight: 800;
     font-size: 64px;
     line-height: 150%;
     text-align: center;
+  }
+  .footer-wraper {
+    padding: 0 120px 56px 120px;
   }
   p {
     font-weight: 500;

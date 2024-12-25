@@ -8,6 +8,13 @@ html {
   scroll-timeline: --page-scroll block;
   animation: smoothScroll 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
+body {
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 @keyframes smoothScroll {
   from {
