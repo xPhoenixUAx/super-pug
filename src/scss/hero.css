@@ -45,6 +45,7 @@
       url('../img/mobile/dsk/confettihome.png');
     background-position: center, bottom;
     background-repeat: no-repeat;
+    background-size: contain;
   }
   .hero-img {
     display: none;
